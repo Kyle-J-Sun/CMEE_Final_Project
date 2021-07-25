@@ -1,0 +1,43 @@
+\section{Discussion}
+
+% \begin{figure}
+%     \begin{subfigure}[t]{.5\textwidth}
+%       \center
+%       \includegraphics[width=\linewidth]{../Results/Results_backup/images/TPC_fitting511.pdf}
+%       \caption{\textbf{ID:511}}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}[t]{.5\textwidth}
+%       \center
+%       \includegraphics[width=\linewidth]{../Results/Results_backup/images/TPC_fitting519.pdf}
+%       \caption{\textbf{ID:519}}
+%     \end{subfigure}
+%
+%     \medskip
+%
+%   % \hspace*{-1cm}
+%     \begin{subfigure}[t]{.5\textwidth}
+%       \center
+%       \includegraphics[width=\linewidth]{../Results/Results_backup/images/TPC_fitting568.pdf}
+%       \caption{\textbf{ID: 568}}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}[t]{.5\textwidth}
+%     \center
+%       \includegraphics[width=\linewidth]{../Results/Results_backup/images/TPC_fitting600.pdf}
+%       \caption{\textbf{ID: 600}}
+%     \end{subfigure}
+%     \caption{Datasets that have poor fitting of mechanistic model}
+%   \end{figure}
+
+  From the results shown above, there is no significant difference in model assessment between the AIC approach and BIC approach. The rank of the best-fit model is not affected, although a little gap can be seen for each model as different approaches of model assessment apply.  Also, the trend is similar to the most datasets when distinct rules apply except for the dataset of photosynthesis, where a significant differences between model performance of cubic model can be seen as applying different rules.
+
+  Due to the interpretability of the mechanistic model, it is expected to be have better performance than some phenomenological or statistical models. However, it is not always true in the project, where the simplified Schoolfield model was the best model only in the photosynthesis dataset when applying rule of single model selection. The reason for this may the mechanistic models have more restrict hypotheses than phenomenological ones, which results in the fitting of mechanistic model is invalid. The figure 3 showed some examples of failed or poor fittings of individual datasets.
+
+  By comparison, AIC and BIC both provided similar outcomes and model selection, although there may be a little differences between results of them. Thus, any one of them can be selected as a main model assessment method in my project. However, AIC was preferred to use in this project. The reasion is (1) AIC is a suitable approach for sparse datasets, given that it is an estimator derived from basic thoery called K-L information theory, which is possible for further correction.Thus, this leads AIC to have second-order derived version that can deliminate estimated bias of small sample size \cite{burnham_anderson_2004}. (2) BIC expects the "true model" to be in the model set while AIC does not \cite{johnson_2004}.
+
+  The motivation of the project is to analyse four candidate models and provide a reasonable comparison between them. However, there are also more works need to be done. Firstly, the starting values of two non-linear models are selected by normal distribution sampling method, which may be not enough for finding the precise starting values. Thus, this may be also the reason why linear model outperformed non-linear model in respiration dataset. A better approach to find the starting value of parameters for non-linear models should be implemented. Secondly, only one mechanistic model are used to make a model comparison here, may causing bias of the results. Thus, more mechanistic models are worthy of consideration in order to improve the accuracy of the results. Third, due to limited computational power, only approximately maximum 300 repeats of fitting for each indivial dataset is available. Hence, more repeats are suppose to be attempted for obtaining more accurate outcome if the computer with stronger computational power is available such as high-performance computer or other supercomputers.
+
+\section{Conclusion}
+
+In conclusion, the mechanistic model, simplified Schoolfield, is significantly useful when fitting the data of biological rate since the data pattern of approximately 42\% of dataset was captured, although cubic model outperformed it in some cases. However, the simplified Schoolfield model does not show an obvious advantage when fitting the datasets of respiration rate, due to the data specificity and strictness of assumptions of mechanistic models. Therefore, there is no sufficient evidence that can conclude that mechanistic model is better than phenomenological models. To select the best models between them, if possible, all datasets should be considered case by case.
