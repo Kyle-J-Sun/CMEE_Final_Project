@@ -10,7 +10,7 @@ import pandas as pd
 import numpy as np
 from numpy import array
 import os
-from tool_functions import cv_repeat, modelProcessor
+from tool_functions import nlp_ldamodel, preprocessor
 
 import warnings
 import sys
@@ -20,8 +20,12 @@ warnings.filterwarnings('ignore')
 
 def main(argvs):
     df = pd.read_csv("../Data/cleaned_data.csv", encoding='utf-8-sig')
-    df = df[0:10]
-    mp = modelProcessor(dat=df)
+    # df = df[0:10]
+    pp = preprocessor(dataset=df)
+    pp.remove_stop_words()
+    pp.word_stemmer(getSet=False)
+    words, dic, corpus = pp.get_corpus()
+    mp = nlp_ldamodel(words, dic, corpus)
     # Parallel Computing
     ite = int(os.environ['PBS_ARRAY_INDEX'])
     # ite = 3
