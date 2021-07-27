@@ -10,13 +10,13 @@ import pandas as pd
 import numpy as np
 import os
 import matplotlib.pyplot as plt
-from tool_functions import nlp_ldamodel
+from tool_functions import nlp_ldamodel, preprocessor
 import warnings
 import sys
 
 def main(argvs):
     df = pd.read_csv("../Data/cleanData.csv")
-    pp = nlp_ldamodel.preprocessor(dataset = df)
+    pp = preprocessor(dataset = df)
     pp.remove_stop_words()
     pp.word_stemmer(getSet=False)
     words, dic, corpus = pp.get_corpus()
