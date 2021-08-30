@@ -1,0 +1,9 @@
+accuracy,model,groups
+0.48235303488782555,Model_alltopics,Non-medicine Generalist
+0.4493139559985564,Model_seltopics,Non-medicine Generalist
+0.6159185069638768,Model_duration,Non-medicine Generalist
+0.6465750593307553,Model_all,Non-medicine Generalist
+0.48824985057306985,Model_alltopics,Medicine Specialist
+0.4750627177168629,Model_seltopics,Medicine Specialist
+0.5218736116825355,Model_duration,Medicine Specialist
+0.625687912910703,Model_all,Medicine Specialist

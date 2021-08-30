@@ -1,4 +1,4 @@
-*~ 
+*~
 *.tmp
 
 #--------------------R gitignore template-------------------
@@ -244,3 +244,14 @@ Mkfile.old
 dkms.conf
 .DS_Store
 *.save
+./Data/medicine_specialist.csv
+./Data/data_ready/doc.txt
+./Data/data_ready/doc2.txt
+./Data/data_ready/Cleaned_Documents.txt
+./Data/non_medicine_generalist.csv
+./Data/cleaned_UKRI_data.csv
+./Data/Cleaned_Data.csv
+./Data/NSFdata.csv
+./Data/NIHdata.csv
+./Data/.ipynb_checkpoints/cleaned_data-checkpoint.csv
+./Data/UKRIdata.csv
